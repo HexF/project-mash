@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333333;
+        color: white;
+        text-align: center;
+
+
+      }
+
+      a{
+        color: white;
+      }
+    </style>
+
+    <meta charset="utf-8">
+    <title>{{ .Page.Mash }} | Project Mash</title>
+  </head>
+  <body style="font-family: 'Quicksand', sans-serif;">
+    <div style="height: 100%; top: 0; padding-left: 1%;">
+      <h1>Project Mash</h1>
+
+      <h3> {{ .Page.Mash }} </h3>
+
+      <p>This page is part of the Mash-Project. A collaboration between Kleinsoft and HexF.</p>
+    </div>
+    <div style="background-color: #333333; color: white; position: fixed; top: 80%; left: 42%; min-width: 16%; white-space: nowrap;">
+      <p style="text-align: center; padding-left: 3%; padding-right: 3%;"><a href="{{ .Page.NextURL }}">Previous Page</a>   |   <a href="{{ .Page.NextURL }}">Next Page</a></p>
+    </div>
+
+    <div class="footer">
+      <p><a href="https://kleinsoft.co.nz">Kleinsoft</a> KaineRaid - <a href="https://www.youtube.com/c/KaineRaid">Youtube</a> - Hexf - <a href="https://twitter.com/hexf_me">Twitter</a>, <a href="http://hexf.me/">Hexf.me</a>, <a href="https://github.com/HexF">Github</a></p>
+    </div>
+
+  </body>
+</html>
