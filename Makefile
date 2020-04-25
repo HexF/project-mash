@@ -1,11 +1,16 @@
-LDFLAGS="-X main.GitCommit=$(shell git rev-list -1 HEAD)"
+GITCOMMIT=$(shell git rev-list -1 HEAD)
+LDFLAGS="-X main.GitCommit=$(GITCOMMIT)"
 
-.PHONY: build clean run
-build: project-mash
-clean:
-	rm project-mash
-run: project-mash
-	./project-mash
-	
-project-mash:
+.PHONY: default build image
+
+default: test image
+
+test:
+	go test -v -cover ./...
+
+build:
+	go get -v -t -d ./...
 	go build -ldflags $(LDFLAGS)
+
+image:
+	docker build -t hexf/project-mash:$(GITCOMMIT) -t hexf/project-mash:latest .

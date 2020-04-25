@@ -8,6 +8,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"os"
+	"strings"
 
 	"github.com/hyperjumptech/grule-rule-engine/ast"
 	"github.com/hyperjumptech/grule-rule-engine/builder"
@@ -99,6 +100,6 @@ func getFact(mashName string) template.HTML {
 	}
 
 	factText = factText + myFact.FactText
-
+	factText = strings.TrimSpace(factText)
 	return template.HTML(factText)
 }

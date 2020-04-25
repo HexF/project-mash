@@ -10,6 +10,7 @@ rule HexF "Displays my website link" salience 10 {
         Mash.Name == "hexf" && (Mash.FactText == "" && Mash.FactFile == "")
     then
         Mash.FactFile = "hexf.html";
+        Retract("Hashes");
 }
 
 rule Hashes "Adds Hashes of mash to fact" salience -1 {
