@@ -1,6 +1,0 @@
-rule Password123 "Sets the fact if the user is on the correct page"{
-    when
-        Mash.Name == "password123"
-    then
-        Mash.FactText = "Don't use this as your password"
-}

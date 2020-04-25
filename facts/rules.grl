@@ -1,0 +1,20 @@
+rule Password123 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "password123" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Don't use this as your password";
+}
+
+rule HexF "Displays my website link" salience 10 {
+    when
+        Mash.Name == "hexf" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "hexf.html";
+}
+
+rule Hashes "Adds Hashes of mash to fact" salience -1 {
+    when true
+    then
+        Mash.FactText = Mash.FactText + Mash.GetHashes();
+        Retract("Hashes");
+}

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       .footer {
@@ -15,15 +17,17 @@
         text-align: center;
       }
 
-      a{
+      a {
         color: black;
       }
 
-      .socialimg{
-        width: 2vw;
+      .socialimg {
+        width: 32px;
       }
 
-      table, td, th {
+      table,
+      td,
+      th {
         border: 1px solid #ddd;
         text-align: left;
       }
@@ -33,81 +37,151 @@
         width: 100%;
       }
 
-      th, td {
+      th,
+      td {
         padding: 15px;
+      }
+      @media (max-width: 800px) {
+        .card-holder {
+          width: 100vw;
+        }
+      }
+      @media (min-width: 801px) {
+        .card-holder {
+          width: 80vw;
+        }
+      }
+
+      .w3-card-4 {
+        margin-bottom: 15px;
       }
     </style>
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ .Page.Mash }} | Project Mash</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <body style="font-family: 'Quicksand', sans-serif;">
-    <div style="height: 100%; padding-left: 30%; padding-top: 1vh;">
-          <div class="w3-container">
-            <div class="w3-card-4" style="width:50%;">
-              <header class="w3-container w3-blue">
-                <h1>{{ .Page.Mash }}</h1>
-              </header>
+    <div class="w3-display-middle">
+      <div class="w3-container card-holder">
+        <div class="w3-card-4">
+          <header class="w3-container w3-blue">
+            <h1>{{ .Page.Mash }}</h1>
+          </header>
 
-              <div class="w3-container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div style="white-space: nowrap;">
-                  <p style="text-align: center; padding-left: 3%; padding-right: 3%;"><a href="{{ .Page.NextURL }}">Previous Page</a>   |   <a href="{{ .Page.NextURL }}">Next Page</a></p>
-                </div>
+          <div class="w3-container">
+            <p>{{ .Page.Fact }}</p>
+            <div style="white-space: nowrap;">
+              <p
+                style="text-align: center; padding-left: 3%; padding-right: 3%;"
+              >
+                {{ if ne .Page.PreviousURL "-1" }}
+                <a href="{{ .Page.PreviousURL }}">Previous Page</a>
+                {{ end }}
+                <a href="{{ .Page.NextURL }}">Next Page</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-card-4">
+          <header class="w3-container w3-blue">
+            <h1>Project Info</h1>
+          </header>
+
+          <div class="w3-container">
+            <p>
+              This page is part of the Mash Project. A collaboration between
+              Kleinsoft and HexF.
+            </p>
+            <p>
+              Project Mash's goal is to come up under every single possible
+              search in a engine search.
+            </p>
+            <p class="socialimg" style="white-space: nowrap;"></p>
+            <div class="w3-row">
+              <div class="w3-col s4 w3-center">HexF</div>
+              <div class="w3-col s4 w3-center">KaineRaid</div>
+              <div class="w3-col s4 w3-center">Kleinsoft</div>
+            </div>
+            <div class="w3-row">
+              <div class="w3-col s4 w3-center">
+                <a href="https://twitter.com/hexf_me"
+                  ><img
+                    src="https://unpkg.com/simple-icons@v2/icons/twitter.svg"
+                    class="socialimg"
+                /></a>
+                <a href="https://github.com/HexF"
+                  ><img
+                    src="https://unpkg.com/simple-icons@v2/icons/github.svg"
+                    class="socialimg"
+                /></a>
+                <a href="https://hexf.me"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Globe_icon.svg"
+                    class="socialimg"
+                /></a>
+              </div>
+              <div class="w3-col s4 w3-center">
+                <a href="https://www.youtube.com/c/KaineRaid"
+                  ><img
+                    src="https://unpkg.com/simple-icons@v2/icons/youtube.svg"
+                    class="socialimg"
+                /></a>
+              </div>
+              <div class="w3-col s4 w3-center">
+                <a href="https://twitter.com/klein_soft"
+                  ><img
+                    src="https://unpkg.com/simple-icons@v2/icons/twitter.svg"
+                    class="socialimg"
+                /></a>
+                <a
+                  href="https://www.youtube.com/channel/UCSGIoRTc9ucIM1mRXqhFF2w"
+                  ><img
+                    src="https://unpkg.com/simple-icons@v2/icons/youtube.svg"
+                    class="socialimg"
+                /></a>
+                <a href="https://kleinsoft.co.nz"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Globe_icon.svg"
+                    class="socialimg"
+                /></a>
               </div>
             </div>
 
-              <div class="w3-card-4" style="width:50%;">
-                <header class="w3-container w3-blue">
-                  <h1>Project Info</h1>
-                </header>
-
-                <div class="w3-container">
-                  <p>This page is part of the Mash Project. A collaboration between Kleinsoft and HexF.</p>
-                  <p>Project Mash's goal is to come up under every single possible search in a engine search.</p>
-                  <br>
-                  <p class="socialimg" style="white-space: nowrap">
-                    <a href="https://kleinsoft.co.nz">Kleinsoft</a> -
-                    <a href="https://www.youtube.com/channel/UCSGIoRTc9ucIM1mRXqhFF2w"><img src="https://unpkg.com/simple-icons@v2/icons/youtube.svg"></a>
-                    <a href="https://twitter.com/klein_soft"><img src="https://unpkg.com/simple-icons@v2/icons/twitter.svg"></a>
-                    | KaineRaid -
-                    <a href="https://www.youtube.com/c/KaineRaid"><img src="https://unpkg.com/simple-icons@v2/icons/youtube.svg"></a>
-                    | HexF -
-                    <a href="https://twitter.com/hexf_me"><img src="https://unpkg.com/simple-icons@v2/icons/twitter.svg"></a>
-                    <a href="https://github.com/HexF"><img src="https://unpkg.com/simple-icons@v2/icons/github.svg"></a>
-                    <a href="https://hexf.me"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Globe_icon.svg" class="socialimg"></a>
-                    <br>
-                </div>
-              </div>
-              <div class="w3-card-4" style="width:50%;">
-                <header class="w3-container w3-blue">
-                  <h1>Server Stats</h1>
-                </header>
-
-                <div class="w3-container">
-                  <br>
-                  <table>
-                    <tr>
-                      <th>Uptime</th>
-                      <td>{{ .Node.Uptime }}</td>
-                    </tr>
-                    <tr>
-                      <th>Node Name</th>
-                      <td>{{ .Node.Hostname }}</td>
-                    </tr>
-                    <tr>
-                      <th>Previous Request</th>
-                      <td>{{ .Node.PreviousRequest }}</td>
-                    </tr>
-                  </table>
-
-                  <br><br>
-              </div>
+            <br />
           </div>
+        </div>
+        <div class="w3-card-4">
+          <header class="w3-container w3-blue">
+            <h1>Server Stats</h1>
+          </header>
+
+          <div class="w3-container">
+            <br />
+            <table>
+              <tr>
+                <th>Uptime</th>
+                <td>{{ .Node.Uptime }}</td>
+              </tr>
+              <tr>
+                <th>Node Name</th>
+                <td>{{ .Node.Hostname }}</td>
+              </tr>
+              <tr>
+                <th>Previous Request</th>
+                <td>{{ .Node.PreviousRequest }}</td>
+              </tr>
+              <tr>
+                <th>App Version</th>
+                <td>{{ .Node.AppVersion | trunc 12 }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-    <br><br>
+  </body>
 </html>
