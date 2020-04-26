@@ -358,7 +358,7 @@ rule Hashes "Sets the fact if the user is on the correct page" salience 10{
         Mash.Name == "hashes" && (Mash.FactText == "" && Mash.FactFile == "" )
 
     then
-        Mash.FactText = "Here are some hashes:"
+        Mash.FactText = "Here are some hashes:";
 
 }
 
