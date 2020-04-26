@@ -13,6 +13,445 @@ rule HexF "Displays my website link" salience 10 {
         Retract("Hashes");
 }
 
+rule RickAstley "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "rickastley" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "rickastley.html";
+        Retract("Hashes");
+}
+
+rule SCL "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "scl" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Detained";
+        Retract("Hashes");
+}
+
+rule Symplee "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "symplee" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Should I say it?";
+        Retract("Hashes");
+}
+
+rule Covid19 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "covid19" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "THIS IS A COVID-19 ANNOUNCEMENT";
+        Retract("Hashes");
+}
+
+rule Stampy "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "stampy" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Cake";
+        Retract("Hashes");
+}
+
+rule Tetris "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "tetris" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "dodecahedron";
+        Retract("Hashes");
+}
+
+rule Fortnite "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "fornite" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Why did you type this?";
+        Retract("Hashes");
+}
+
+rule Whowrotethis "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "whowrotethis" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Kaine wrote this.. 4:04 PM 26/04/2020";
+        Retract("Hashes");
+}
+
+rule Shrug "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "shrug" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "/shrug";
+        Retract("Hashes");
+}
+
+rule Sans "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "sans" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "You're gonna have a bad time";
+        Retract("Hashes");
+}
+
+rule Chara "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chara" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "(Megalovania intensifies)";
+        Retract("Hashes");
+}
+
+rule Sympleesucks "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "sympleesucks" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Oh god, is that you HexF?";
+        Retract("Hashes");
+}
+
+rule Suspension "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "suspension" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "You've been in suspension for 99999999999.";
+        Retract("Hashes");
+}
+
+rule Applericecar "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "applericecar" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "(Happy apfel-reis noises)";
+        Retract("Hashes");
+}
+
+rule Ja "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "ja" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "jajajajajaja";
+        Retract("Hashes");
+}
+
+rule Nathan "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "nathan" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "nathaniel";
+        Retract("Hashes");
+}
+
+rule Ssifuhsiudfhisdfh "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "ssifuhsiudfhisdfh" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Can we stop looking at the file?";
+        Retract("Hashes");
+}
+
+rule Straw "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "straw" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Can someone please call the turtle protection agency?";
+        Retract("Hashes");
+}
+
+rule Apple "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "apple" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Eat an apple for breakfast. I don't mean the fruit.";
+        Retract("Hashes");
+}
+
+rule G40 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "g40" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "oh hi";
+        Retract("Hashes");
+}
+
+rule Error "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "error" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Critical error";
+        Retract("Hashes");
+}
+
+rule Temmie "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "temmie" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "hOI IM TEMMIE!";
+        Retract("Hashes");
+}
+
+rule Bob "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "bob" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Hoi- Sorry.. Hi im bob.";
+        Retract("Hashes");
+}
+
+rule KaineRaid "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "kaineraid" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "I exist.";
+        Retract("Hashes");
+}
+
+rule Kaine "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "kaine" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "That's creepy. Call me KaineRaid.";
+        Retract("Hashes");
+}
+
+rule deniz "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "deniz" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Erm.. *Your vision temporarily goes blind and you forgot you read this*";
+        Retract("Hashes");
+}
+
+rule Chain "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain0.html";
+        Retract("Hashes");
+}
+
+rule Chain1 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain1" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain1.html";
+        Retract("Hashes");
+}
+
+rule Chain2 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain2" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain2.html";
+        Retract("Hashes");
+}
+
+rule Chain3 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain3" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain3.html";
+        Retract("Hashes");
+}
+
+
+rule Chain4 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain4" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain4.html";
+        Retract("Hashes");
+}
+
+rule Chain5 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain5" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain5.html";
+        Retract("Hashes");
+}
+
+rule Chain6 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain6" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain6.html";
+        Retract("Hashes");
+}
+
+rule Chain7 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain7" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain7.html";
+        Retract("Hashes");
+}
+
+rule Chain8 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain8" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain8.html";
+        Retract("Hashes");
+}
+
+rule Chain9 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain9" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain9.html";
+        Retract("Hashes");
+}
+
+
+rule Chain10 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain10" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain10.html";
+        Retract("Hashes");
+}
+
+
+rule Chain11 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain11" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain11.html";
+        Retract("Hashes");
+}
+
+
+rule Chain12 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain12" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain12.html";
+        Retract("Hashes");
+}
+
+rule Chain13 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "chain13" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "chain13.html";
+        Retract("Hashes");
+}
+
+rule Lenny "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "lenny" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "( ͡° ͜ʖ ͡°)";
+        Retract("Hashes");
+}
+
+rule IHave400LinesOfFactsNow "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "ihave400linesoffactsnow" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "HexF says 'Mk'";
+        Retract("Hashes");
+}
+
+rule Hashes "Sets the fact if the user is on the correct page" salience 10{
+    when
+        Mash.Name == "hashes" && (Mash.FactText == "" && Mash.FactFile == "" )
+
+    then
+        Mash.FactText = "Here are some hashes:";
+
+}
+
+rule Jackyboy "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "JackyBoy" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Hi I like to be rude for no reason";
+        Retract("Hashes");
+}
+
+rule Git "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "git" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Phanks for making this website possible";
+        Retract("Hashes");
+}
+
+rule VeinMiner "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "veinminer" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Don't break the entire island..";
+        Retract("Hashes");
+}
+
+rule Factorio "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "factorio" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "The factory must grow.";
+        Retract("Hashes");
+}
+
+rule Factoreo "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "factoreo" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Yes.";
+        Retract("Hashes");
+}
+
+rule Levitation "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "levitation" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "levitation.html";
+        Retract("Hashes");
+}
+
+rule PutOnYourSundayClothes "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "putonyoursundayclothes" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Hello, Dolly!";
+        Retract("Hashes");
+}
+
+rule HelloDolly "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "hellodolly" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Wall-eeeeeeeeeeeeeeeeeeeeeee..";
+        Retract("Hashes");
+}
+
+rule 2815AD "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "2815AD" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "All aboard the Axiom";
+        Retract("Hashes");
+}
+
+rule BNL "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "bnl" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Buy n Large is your superstore.. We've got all you need.. and so much more. Happiness is what we sell.. That's why everyone.. Loves BNL... ";
+        Retract("Hashes");
+}
+
+rule bnlbatteries "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "bnlbatteries" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Buzz: 3, 4.";
+        Retract("Hashes");
+}
+
+
+
 rule Hashes "Adds Hashes of mash to fact" salience -1 {
     when true
     then
