@@ -57,16 +57,20 @@
       }
     </style>
 
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149405414-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-149405414-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-        gtag('config', 'UA-149405414-1');
-      </script>
+      gtag('config', 'UA-149405414-1');
+    </script>
 
     <meta charset="utf-8" />
     <title>{{ .Page.Mash }} | Project Mash</title>
@@ -104,14 +108,27 @@
 
           <div class="w3-container">
             <p>
-              This page is part of the Mash Project. A collaboration between
-              Kleinsoft and HexF.
+              This page is a part of Project Mash, A collaboration between HexF
+              and Kleinsoft to come up under every single google search result
+              no matter the spelling.
+            </p>
+
+            <p>
+              We are looking for sponsors to help keep the project alive.
+              Sponsor the project on the GitHub Page.
             </p>
             <p>
-              Project Mash's goal is to come up under every single possible
-              search in a engine search.
+              If you have some web design skill, feel free to contribute a
+              better UI, with actual mobile support. Make sure to keep the
+              existing templating!
             </p>
-            <p class="socialimg" style="white-space: nowrap;"></p>
+            <div class="w3-row">
+              <div class="w3-col s12">
+                <a href="https://github.com/HexF/project-mash"
+                  >View the Project on GitHub</a
+                >
+              </div>
+            </div>
             <div class="w3-row">
               <div class="w3-col s4 w3-center">HexF</div>
               <div class="w3-col s4 w3-center">KaineRaid</div>
