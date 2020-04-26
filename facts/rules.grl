@@ -353,7 +353,7 @@ rule IHave400LinesOfFactsNow "Sets the fact if the user is on the correct page" 
         Retract("Hashes");
 }
 
-rule Hashes "Sets the fact if the user is on the correct page" salience 10{
+rule HashesMash "Sets the fact if the user is on the correct page" salience 10{
     when
         Mash.Name == "hashes" && (Mash.FactText == "" && Mash.FactFile == "" )
 
@@ -426,7 +426,7 @@ rule HelloDolly "Sets the fact if the user is on the correct page" salience 10 {
         Retract("Hashes");
 }
 
-rule 2815AD "Sets the fact if the user is on the correct page" salience 10 {
+rule Year2815AD "Sets the fact if the user is on the correct page" salience 10 {
     when
         Mash.Name == "2815AD" && (Mash.FactText == "" && Mash.FactFile == "")
     then

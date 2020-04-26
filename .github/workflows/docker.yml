@@ -28,8 +28,6 @@ jobs:
 
       - name: Test
         run: make test
-      - name: Make Image
-        run: make image
 
 
   # Push image to GitHub Packages.
@@ -56,18 +54,22 @@ jobs:
           
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-
-          # Use Docker `latest` tag convention
-          [ "$VERSION" == "master" ] && VERSION=latest
-
+          
           echo IMAGE_ID=$IMAGE_ID
-          echo VERSION=$VERSION
-
-          docker tag image $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:$VERSION
+          echo VERSION=${{ github.sha }}
+          
+          docker tag image $IMAGE_ID:${{ github.sha }}
+          docker push $IMAGE_ID:${{ github.sha }}
+        
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    needs: [test,push]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Deploy
+        uses: WyriHaximus/github-action-helm3@v1.0.0
+        with:
+          exec: helm upgrade --namespace=project-mash project-mash .deploy/kubernetes --set "image.tag=${{ github.sha }}"
+          kubeconfig: '${{ secrets.KUBECONFIG }}'
+    
