@@ -442,13 +442,65 @@ rule BNL "Sets the fact if the user is on the correct page" salience 10 {
         Retract("Hashes");
 }
 
-rule bnlbatteries "Sets the fact if the user is on the correct page" salience 10 {
+rule BNLBatteries "Sets the fact if the user is on the correct page" salience 10 {
     when
         Mash.Name == "bnlbatteries" && (Mash.FactText == "" && Mash.FactFile == "")
     then
         Mash.FactText = "Buzz: 3, 4.";
         Retract("Hashes");
 }
+
+rule Rustyspoons "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "rustyspoons" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "I.. Like.. Rusty.. Spoons..";
+        Retract("Hashes");
+}
+
+rule k "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "k" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "K for Klein. Klein for KleinSoft.";
+        Retract("Hashes");
+}
+
+rule Makoa "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "makoa" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "turtle man with cannon";
+        Retract("Hashes");
+}
+
+rule ieatedabutter "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "ieatedabutter" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "ieatedabutter.html";
+        Retract("Hashes");
+}
+
+rule swiss "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "swiss" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Swiss = Switzerland you uncultured swine!";
+        Retract("Hashes");
+}
+
+rule C418Sweden "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "c418sweden" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "(It's called Eye sweat)";
+        Retract("Hashes");
+}
+
+
+
+
 
 
 
