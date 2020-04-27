@@ -498,8 +498,61 @@ rule C418Sweden "Sets the fact if the user is on the correct page" salience 10 {
         Retract("Hashes");
 }
 
+rule Status "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "status" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Should be working if you are reading this..";
+        Retract("Hashes");
+}
 
+rule Testingtesting123 "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "testingtesting123" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "Testingtesting123 27/04/2020 2:56pm";
+        Retract("Hashes");
+}
 
+rule Rules "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "rules" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactText = "rules.grl";
+        Retract("Hashes");
+}
+
+rule StillAlive "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "stillalive" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "stillalive.html";
+        Retract("Hashes");
+}
+
+rule red "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "red" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "red.html";
+        Retract("Hashes");
+}
+
+rule green "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "green" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "green.html";
+        Retract("Hashes");
+}
+
+rule blue "Sets the fact if the user is on the correct page" salience 10 {
+    when
+        Mash.Name == "blue" && (Mash.FactText == "" && Mash.FactFile == "")
+    then
+        Mash.FactFile = "blue.html";
+        Retract("Hashes");
+}
 
 
 
