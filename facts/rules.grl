@@ -478,7 +478,7 @@ rule ieatedabutter "Sets the fact if the user is on the correct page" salience 1
     when
         Mash.Name == "ieatedabutter" && (Mash.FactText == "" && Mash.FactFile == "")
     then
-        Mash.FactText = "ieatedabutter.html";
+        Mash.FactFile = "ieatedabutter.html";
         Retract("Hashes");
 }
 
